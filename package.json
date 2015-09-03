@@ -9,7 +9,7 @@
     "bower": "^1.4.1",
     "browser-sync": "^2.7.6",
     "del": "^1.2.0",
-    "ghost": "0.6.4",
+    "ghost": "0.7.0",
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.3.1",
     "gulp-cdnizer": "^1.1.6",
