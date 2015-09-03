@@ -1,0 +1,37 @@
+@import "../module/top-nav.scss";
+
+header {
+
+  > section {
+    @include span-columns(12);
+    @include pad();
+
+    background: $primary-colour;
+    text-align: center;
+    border-bottom: 2px solid $secondary-colour;
+
+    img {
+      height: 250px;
+
+      @include media($mobile) {
+        height: 150px;
+      }
+    }
+
+    h1 {
+      color: $secondary-colour;
+    }
+
+    h2 {
+      color: whitesmoke;
+
+      @include media($tablet) {
+        margin-top: 0;
+      }
+
+      @include media($mobile) {
+        font-size: 1em;
+      }
+    }
+  }
+}

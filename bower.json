@@ -1,0 +1,9 @@
+{
+  "name": "brage-ghost-theme",
+  "version": "1.0.0",
+  "description": "Brage Ghost theme",
+  "dependencies": {
+    "normalize-scss": "~3.0.3",
+    "highlightjs": "~8.5.0"
+  }
+}

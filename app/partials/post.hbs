@@ -1,0 +1,18 @@
+<article class="{{post_class}}">
+  <header class="post-header">
+    <h2><a href="{{url}}">{{title}}</a></h2>
+    <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMMM YYYY"}}</time>
+  </header>
+  <section class="post-excerpt">
+    <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">...</a></p>
+  </section>
+  <footer class="post-meta">
+    {{#if author.image}}<img class="author-thumb" src="{{author.image}}" alt="Author image"/>{{/if}}
+    {{author}}
+    <div class="tags">
+      {{#foreach tags}}
+        <a href="{{url}}" title="{{name}}"><i class="icon-tags"></i>&nbsp;{{name}}</a>
+      {{/foreach}}
+    </div>
+  </footer>
+</article>

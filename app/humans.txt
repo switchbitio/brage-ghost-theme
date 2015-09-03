@@ -1,0 +1,19 @@
+ |  _ \                        / ____| |             | |   |__   __| |
+ | |_) |_ __ __ _  __ _  ___  | |  __| |__   ___  ___| |_     | |  | |__   ___ _ __ ___   ___
+ |  _ <| '__/ _` |/ _` |/ _ \ | | |_ | '_ \ / _ \/ __| __|    | |  | '_ \ / _ \ '_ ` _ \ / _ \
+ | |_) | | | (_| | (_| |  __/ | |__| | | | | (_) \__ \ |_     | |  | | | |  __/ | | | | |  __/
+ |____/|_|  \__,_|\__, |\___|  \_____|_| |_|\___/|___/\__|    |_|  |_| |_|\___|_| |_| |_|\___|
+                   __/ |
+                  |___/
+
+/* TEAM */
+Donovan Muller:
+	Twitter: @donovancmuller
+	Github: donovanmuller
+	Email: donovan@switchbit.io
+	Country: South Africa
+
+/* SITE */
+Standards: HTML5, CSS3
+Components: Ghost, Normalize.css, Bourbon Neat, HighlightJS
+Software: IntelliJ IDEA, Gulp, Sass/Scss

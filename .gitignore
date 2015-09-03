@@ -1,0 +1,18 @@
+node_modules
+app/bower_components
+dist*
+.tmp
+.sass-cache
+.idea
+*.iml
+
+# Ghost
+*.db
+
+# Gulp generated
+app/assets/css/screen.css
+app/assets/fonts/**/*.css
+app/assets/fonts/Lora-*.woff
+
+# Docker
+docker/ghost/dist

@@ -1,0 +1,23 @@
+.tag-template {
+
+  .tag-section {
+    margin-top: 60px;
+    background-color: lighten($secondary-colour, 20%);
+
+    .tag-details {
+      @include outer-container;
+
+      h1 {
+        @include pad;
+
+        margin: 0;
+        color: $primary-colour;
+
+        @include media($mobile) {
+          font-size: 1.5em;
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,39 @@
+@import "../module/pagination.scss";
+
+.container {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -10em;
+}
+
+html, body {
+  height: 100%;
+}
+
+.container:after {
+  content: "";
+  display: block;
+}
+
+.footer, .container:after {
+  height: 10em;
+}
+
+.footer {
+
+  background-color: $secondary-colour;
+
+  .legal {
+    background-color: darken($secondary-colour, 10%);
+    height: 2em;
+
+    aside {
+      color: $black;
+      line-height: 3em;
+      font-size: 0.7em;
+      padding-left: 1em;
+    }
+  }
+
+}

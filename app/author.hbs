@@ -1,0 +1,33 @@
+{{!< default}}
+
+<section class="author-section">
+  <div class="author-profile">
+    {{#author}}
+      <img src="{{image}}" alt="Donovan Muller"/>
+
+      <div class="author-details">
+        <h1>{{name}}</h1>
+
+        <p>{{bio}}</p>
+      </div>
+    {{/author}}
+  </div>
+
+  <section class="share">
+    <a href="https://twitter.com/intent/follow?screen_name={{author.location}}"
+       onclick="window.open(this.href, 'Twitter Follow', 'width=530,height=600');
+           return false;">
+      <i class="icon-twitter"></i>
+    </a>
+  </section>
+</section>
+
+<main>
+
+  <section>
+    {{#foreach posts}}
+      {{> "post"}}
+    {{/foreach}}
+  </section>
+
+</main>

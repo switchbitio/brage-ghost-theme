@@ -1,0 +1,12 @@
+<footer class="footer" role="contentinfo">
+  {{#is "index, tag, author"}}
+    {{pagination}}
+  {{else}}
+    <nav class="pagination" role="navigation">
+      <a href="{{@blog.url}}"><img src="/assets/images/brage-logo.png" alt="Brage Theme"></a>
+    </nav>
+  {{/is}}
+  <section class="legal">
+    <aside>Copyright &copy; 2015 <a href="http://switchbit.io">Switchbit</a></aside>
+  </section>
+</footer>

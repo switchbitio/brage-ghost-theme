@@ -1,0 +1,84 @@
+{{!< default}}
+
+{{#post}}
+
+  <main>
+
+    <article class="{{post_class}}">
+
+      <header class="post-header">
+        <h1 class="post-title">{{title}}</h1>
+        <div class="post-meta">
+          <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">
+            {{date format="DD MMMM YYYY"}}
+          </time>
+          <div class="tags">
+            {{#foreach tags}}
+              <a href="{{url}}" title="{{name}}"><i class="icon-tags"></i>&nbsp;{{name}}</a>
+            {{/foreach}}
+          </div>
+        </div>
+      </header>
+
+      <section class="post-content">
+        {{content}}
+      </section>
+
+      <section class="share">
+        <a href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
+           onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');
+           return false;">
+          <i class="icon-twitter"></i>
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+           onclick="window.open(this.href, 'facebook-share','width=580,height=296');
+           return false;">
+          <i class="icon-facebook"></i>
+        </a>
+        <a href="https://plus.google.com/share?url={{url absolute="true"}}"
+           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');
+           return false;">
+          <i class="icon-gplus"></i>
+        </a>
+      </section>
+
+      <footer class="post-meta">
+      {{#author}}
+        {{#if image}}<img class="author-thumb" src="{{image}}" alt="{{name}}"/>{{/if}}
+        <a href="{{url}}">{{name}}</a>
+        <p>{{bio}}</p>
+      {{/author}}
+      </footer>
+
+    </article>
+
+  </main>
+
+  <aside class="read-next">
+    <div class="next-posts">
+      {{#prev_post}}
+        <a class="read-next-story prev" href="{{url}}">
+          <section class="post">
+            <aside>Previous post</aside>
+            <h2>{{title}}</h2>
+            <p>{{excerpt words="19"}}&hellip;</p>
+          </section>
+        </a>
+      {{else}}
+        <a class="read-next-story prev" href="#"></a>
+      {{/prev_post}}
+      {{#next_post}}
+        <a class="read-next-story" href="{{url}}">
+          <section class="post">
+            <aside>Next post</aside>
+            <h2>{{title}}</h2>
+            <p>{{excerpt words="19"}}&hellip;</p>
+          </section>
+        </a>
+      {{else}}
+        <a class="read-next-story" href="#"></a>
+      {{/next_post}}
+    </div>
+  </aside>
+
+{{/post}}

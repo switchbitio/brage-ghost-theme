@@ -1,0 +1,40 @@
+@function headings($from: 1, $to: 6) {
+  @if $from == $to {
+    @return 'h#{$from}';
+  } @else {
+    @return 'h#{$from},' + headings($from+1, $to);
+  }
+}
+
+html {
+  font-family: 'Lora', serif;
+}
+
+#{headings()} {
+  font-family: "nexa-bold", "sans-serif";
+  color: $primary-colour;
+  margin-top: 6vh;
+
+  a, a:visited {
+    font-family: "nexa-bold", "sans-serif";
+
+    &:hover {
+      color: lighten($primary-colour, 10%);
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $primary-colour;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+p, li {
+  line-height: $golden;
+  font-size: 1.2rem;
+  color: $black;
+}

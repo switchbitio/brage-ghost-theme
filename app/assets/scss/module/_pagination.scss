@@ -1,0 +1,26 @@
+nav.pagination {
+  @include outer-container;
+
+  position: relative;
+  text-align: center;
+  height: 8em;
+
+  img {
+    height: 6em;
+    margin-top: 1em;
+  }
+
+  a.nav {
+    position: absolute;
+    top: 50%;
+    font-size: 2em;
+
+    &.prev {
+      left: 0;
+    }
+
+    &.next {
+      right: 0
+    }
+  }
+}

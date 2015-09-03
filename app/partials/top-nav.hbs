@@ -1,0 +1,32 @@
+{{^is "home"}}
+  <nav class="navigation" role="banner">
+    <div class="navigation-wrapper">
+      <a href="{{@blog.url}}" class="logo">
+        <img src="/assets/images/brage-logo.png" alt="Brage Theme">
+        <span>{{@blog.title}}</span>
+      </a>
+      <nav role="navigation">
+        <a class="nav-link social" href="{{@blog.url}}/rss/"><i class="icon-rss"></i></a>
+        {{#is "post"}}
+          {{#post}}
+            <a class="nav-link social" href="https://plus.google.com/share?url={{url absolute="true"}}"
+               onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');
+         return false;">
+              <i class="icon-gplus"></i>
+            </a>
+            <a class="nav-link social" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+               onclick="window.open(this.href, 'facebook-share','width=580,height=296');
+         return false;">
+              <i class="icon-facebook"></i>
+            </a>
+            <a class="nav-link" href="https://twitter.com/intent/tweet?text={{encode title}}&amp;url={{url absolute="true"}}"
+               onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');
+         return false;">
+              <i class="icon-twitter"></i>
+            </a>
+          {{/post}}
+        {{/is}}
+      </nav>
+    </div>
+  </nav>
+{{/is}}

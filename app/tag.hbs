@@ -1,0 +1,19 @@
+{{!< default}}
+
+<section class="tag-section">
+  {{#tag}}
+    <div class="tag-details">
+      <h1><i class="icon-tags"></i>&nbsp;{{name}}</h1>
+    </div>
+  {{/tag}}
+</section>
+
+<main>
+
+  <section>
+    {{#foreach posts}}
+      {{> "post"}}
+    {{/foreach}}
+  </section>
+
+</main>

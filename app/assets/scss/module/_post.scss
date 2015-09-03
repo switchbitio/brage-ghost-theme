@@ -1,0 +1,249 @@
+.post {
+  margin-bottom: 8vh;
+
+  @include media($mobile) {
+    margin-top: 1rem;
+  }
+
+  .post-meta {
+
+    .tags {
+      margin-top: 30px;
+
+      @include media($mobile) {
+        margin-top: 15px;
+      }
+
+      a {
+        padding: 0.5em;
+        background-color: lighten($secondary-colour, 20%);
+        color: $primary-colour;
+        font-size: 0.8em;
+        text-decoration: none;
+
+        &:hover {
+          background-color: $primary-colour;
+          color: whitesmoke;
+        }
+      }
+    }
+
+    a {
+      color: $tertiary-colour;
+    }
+  }
+
+  h1, h2 {
+    margin-top: 1vh;
+    margin-bottom: 4vh;
+
+    a:hover {
+      text-decoration: none;
+    }
+  }
+
+  .post-header {
+
+    h1 {
+
+      @include media($mobile) {
+        font-size: 2em;
+      }
+    }
+
+    h2 {
+      font-size: 2em;
+
+      @include media($mobile) {
+        font-size: 1.5em;
+      }
+    }
+  }
+
+  time {
+    margin-top: -4vh;
+    display: block;
+    font-size: 1rem;
+    color: $tertiary-colour;
+  }
+
+  footer {
+    line-height: 2rem;
+    margin: 2rem 0;
+    font-size: 1rem;
+
+    .author-thumb {
+      width: 2em;
+      float: left;
+      margin-right: 9px;
+      border-radius: 100%;
+    }
+
+    time {
+      display: block;
+    }
+  }
+}
+
+// Post page
+.post-template {
+
+  .post {
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 1vh;
+
+      @include media($mobile) {
+        font-size: 1.5em;
+      }
+    }
+
+    h2 {
+      margin-top: 6vh;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    .post-meta {
+
+      time {
+        display: inline-block;
+        margin-top: 0;
+        margin-bottom: 1em;
+      }
+
+      .tags {
+        margin: 0;
+      }
+    }
+
+    .post-content {
+      margin-top: 3em;
+
+      a {
+        color: $tertiary-colour;
+        font-weight: bold;
+      }
+
+      code {
+        background-color: $code-grey;
+      }
+
+      pre > code {
+        margin: 2vh 0;
+
+        &.hljs {
+          padding: 2vh;
+        }
+      }
+    }
+
+    .share {
+      margin-top: 8rem;
+      text-align: center;
+      font-size: 4em;
+
+      @include media($mobile) {
+        margin-top: 4rem;
+        font-size: 3em;
+      }
+
+      a {
+        color: $secondary-colour;
+        text-decoration: none;
+
+        &:hover {
+          color: $primary-colour;
+        }
+      }
+    }
+
+    footer {
+      margin: 4rem 0 0;
+      text-align: center;
+
+      img {
+        float: none;
+        width: 4em;
+        margin-right: 0;
+      }
+
+      a {
+        display: block;
+        font-size: 1.5em;
+        font-family: "nexa-bold", "sans-serif";
+      }
+
+      p {
+        margin: 1em auto;
+        max-width: 30em;
+        font-size: 1.1em;
+
+        @include media($mobile) {
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+
+  .read-next {
+    background-color: $primary-colour;
+
+    .next-posts {
+      @include outer-container;
+
+      display: table;
+
+      a {
+        @include pad;
+
+        display: table-cell;
+        width: 50%;
+
+        .post {
+          margin: 0;
+
+          aside {
+            color: $secondary-colour;
+            font-size: 1em;
+          }
+
+          h2 {
+            color: whitesmoke;
+            margin: 1em 0;
+
+            @include media($mobile) {
+              font-size: 1.2em;
+            }
+          }
+
+          p {
+            color: whitesmoke;
+            margin: 0;
+
+            @include media($mobile) {
+              font-size: 0.8em;
+            }
+          }
+        }
+
+        &.prev {
+
+          .post {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}
+
+.archive-template {
+
+  h2 {
+    margin-top: 6vh;
+  }
+}
