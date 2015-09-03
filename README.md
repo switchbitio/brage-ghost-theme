@@ -25,7 +25,7 @@ The layout of the Gulp tasks as well as some of the configurations are inspired 
  
 ## Using the Brage theme as is
  
-If you simply want to use the Brage theme for your own Ghost blog then you can [download](https://github.com/switchbitio/brage-ghost-theme/releases/tag/1.0.0) the latest release
+If you simply want to use the Brage theme for your own Ghost blog then you can [download](https://github.com/switchbitio/brage-ghost-theme/releases) the latest release
 or if you prefer building it yourself, clone this repository and run:
 
 ```
