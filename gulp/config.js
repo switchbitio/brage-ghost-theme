@@ -94,7 +94,7 @@ module.exports = {
     ]
   },
   delete: {
-    src: [ dist ]
+    src: [ dist, 'docker/ghost/dist']
   },
   gzip: {
     src: distAssets + '/**/*.{css,js}',
@@ -154,7 +154,16 @@ module.exports = {
       dest: distFonts
     },
     dist: {
-      src: dist + '/**/*'
+      src: dist + '/**/*',
+      docker: {
+        dest: 'docker/ghost/dist'
+      }
+    }
+  },
+  dist: {
+    docker: {
+      src: 'docker',
+      command: 'docker-compose -p brage build'
     }
   },
   ghost: {
@@ -163,7 +172,8 @@ module.exports = {
     },
     prod: {
       env: 'gulp/prod.env.json',
-      config: '../../ghost-prod-config.js'
+      config: '../../ghost-prod-config.js',
+      docker: 'docker-compose -p brage build && docker-compose -p brage up'
     }
   }
 };
