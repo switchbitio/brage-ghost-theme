@@ -90,6 +90,39 @@ $ gulp dist && gulp zip
 The theme `.zip` will be located in the `dist` directory.
 You can now upload your theme to your Ghost Pro instance or install on your self hosted Ghost instance.
 
+## Run as Docker containers
+
+If you choose to run your Ghost blog as Docker containers, you can stand up a complete production instance of Ghost, with the Brage theme installed, by running the following:
+
+```
+# You MUST have docker-compose > 1.4.0 installed
+$ gulp ghost:docker
+```
+
+This will use `docker-compose` to build the images and stand up the following containers:
+
+* `brage_content` - A volume container that will contain your Ghost content, theme files etc.
+* `brage_ghost` - Container that will contain your Ghost instance. This is separated from your blog content so that you can upgrade Ghost versions or configurations without losing your content.
+* `brage_nginx` - An nginx container pre-configured and optimised to serve your Ghost blog
+
+You can navigate to http://localhost:2368 to view your Ghost instance.
+**NOTE:** You must first setup your blog by going to http://localhost:2368/ghost and following the instructions.
+Once you're done setting up your blog, don't forget to select the Brage theme under Settings > General > Theme
+
+### Mail configuration
+
+By default [Mailgun](http://www.mailgun.com/) is used as the mail provider.
+Set the following environment variables (`MAILGUN_USER` and `MAILGUN_PASSWORD`) for the `brage_ghost` container to the correct values for your Mailgun account.
+You can also add these to `docker/ghost/Dockerfile`.
+
+Alternatively, configure Ghost mail in `docker/ghost/config-prod.js` according to these instructions: http://support.ghost.org/mail/
+Don't forget to rebuild (this is done for you with `gulp ghost:docker`) your images after making any changes.
+
+### Blog URL
+
+The default blog URL is brage.switchbit.io.
+Change the URL to that of your blog in `docker/ghost/config-prod.js` and don't forget to rebuild your Ghost image.
+
 ## License
 
 See the LICENSE file for license rights and limitations (MIT).
