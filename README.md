@@ -105,9 +105,10 @@ This will use `docker-compose` to build the images and stand up the following co
 * `brage_ghost` - Container that will contain your Ghost instance. This is separated from your blog content so that you can upgrade Ghost versions or configurations without losing your content.
 * `brage_nginx` - An nginx container pre-configured and optimised to serve your Ghost blog
 
-You can navigate to http://localhost:2368 to view your Ghost instance.
-**NOTE:** You must first setup your blog by going to http://localhost:2368/ghost and following the instructions.
-Once you're done setting up your blog, don't forget to select the Brage theme under Settings > General > Theme
+You can navigate to [http://localhost:2368](http://localhost:2368) or the blog URL configured in `docker/ghost/config-prod.js` to view your Ghost instance.
+
+**NOTE:** You must first setup your blog by going to [http://localhost:2368/ghost](http://localhost:2368/ghost) and following the instructions.
+Once you're done setting up your blog, don't forget to select the Brage theme under `Settings > General > Theme`.
 
 ### Mail configuration
 
@@ -115,7 +116,7 @@ By default [Mailgun](http://www.mailgun.com/) is used as the mail provider.
 Set the following environment variables (`MAILGUN_USER` and `MAILGUN_PASSWORD`) for the `brage_ghost` container to the correct values for your Mailgun account.
 You can also add these to `docker/ghost/Dockerfile`.
 
-Alternatively, configure Ghost mail in `docker/ghost/config-prod.js` according to these instructions: http://support.ghost.org/mail/
+Alternatively, configure Ghost mail in `docker/ghost/config-prod.js` according to these instructions: [http://support.ghost.org/mail](http://support.ghost.org/mail). 
 Don't forget to rebuild (this is done for you with `gulp ghost:docker`) your images after making any changes.
 
 ### Blog URL
