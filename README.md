@@ -1,5 +1,7 @@
 ![Brage Theme Screenshot](http://i.imgur.com/0ydeDsH.png)
 
+**Live demo at [brage.switchbit.io](http://brage.switchbit.io/)**
+
 # Brage Ghost Theme
 
 A [Ghost](https://ghost.org/) theme built using Gulp.

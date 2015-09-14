@@ -22,7 +22,7 @@ server {
     proxy_busy_buffers_size               64k;
     proxy_temp_file_write_size            64k;
 
-    proxy_pass                            http://ghost:2368;
+    proxy_pass                            http://brage-ghost:2368;
   }
 
   # tokenized images can be cached forever
@@ -34,7 +34,7 @@ server {
     add_header        Cache-Control public;
     add_header        Vary Accept;
 
-    proxy_pass        http://ghost:2368/assets/images/$image-$hash$webp_suffix;
+    proxy_pass        http://brage-ghost:2368/assets/images/$image-$hash$webp_suffix;
 
     access_log        off;
   }
@@ -44,7 +44,7 @@ server {
     expires           1w;
     add_header        Cache-Control public;
 
-    proxy_pass        http://ghost:2368/$uri;
+    proxy_pass        http://brage-ghost:2368/$uri;
 
     access_log        off;
   }
@@ -54,7 +54,7 @@ server {
     expires           max;
     add_header        Cache-Control public;
 
-    proxy_pass        http://ghost:2368/$uri;
+    proxy_pass        http://brage-ghost:2368/$uri;
 
     access_log        off;
   }
