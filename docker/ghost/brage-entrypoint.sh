@@ -5,4 +5,7 @@ set -e
 rm -rf $GHOST_CONTENT/themes
 rm -f $GHOST_CONTENT/config.js
 
+chown -R user:user "$GHOST_CONTENT"
+chown -R user:user "$GHOST_SOURCE"
+
 exec /entrypoint.sh $@
