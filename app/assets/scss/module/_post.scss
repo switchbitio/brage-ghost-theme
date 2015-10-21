@@ -95,12 +95,36 @@
       margin-bottom: 1vh;
 
       @include media($mobile) {
-        font-size: 1.5em;
+        font-size: 2em;
       }
     }
 
     h2 {
-      margin-top: 6vh;
+      margin-top: 4vh;
+      font-size: 2em;
+
+      @include media($mobile) {
+        font-size: 1.5em;
+      }
+    }
+
+    h3 {
+      margin-top: 4vh;
+      font-size: 1.5em;
+
+      @include media($mobile) {
+        font-size: 1.3em;
+      }
+    }
+
+    h4 {
+      margin-top: 3vh;
+      font-size: 1.3em;
+
+      @include media($mobile) {
+        margin-top: 4vh;
+        font-size: 1.1em;
+      }
     }
 
     img {
