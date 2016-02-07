@@ -1,4 +1,4 @@
-FROM nginx
+FROM nginx:1
 
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY brage-blog /etc/nginx/sites-enabled/brage-blog

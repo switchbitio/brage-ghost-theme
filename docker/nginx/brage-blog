@@ -27,14 +27,11 @@ server {
 
   # tokenized images can be cached forever
   location ~ "/assets/images/(.*)-([a-z0-9]{10})\.(?:png|jpe?g|tiff)(.*)$" {
-    set               $image $1;
-    set               $hash $2;
-
     expires           max;
     add_header        Cache-Control public;
     add_header        Vary Accept;
 
-    proxy_pass        http://brage-ghost:2368/assets/images/$image-$hash$webp_suffix;
+    proxy_pass        http://brage-ghost:2368/$uri$webp_suffix;
 
     access_log        off;
   }

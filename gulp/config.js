@@ -82,11 +82,11 @@ module.exports = {
         file: '/bower_components/highlightjs/highlight.pack.js',
         package: 'highlightjs',
         test: 'window.hljs',
-        cdn: '//cdnjs.cloudflare.com/ajax/libs/highlight.js/${major}.${minor}/highlight.min.js'
+        cdn: '//cdnjs.cloudflare.com/ajax/libs/highlight.js/${version}/highlight.min.js'
       }, {
         file: '/bower_components/highlightjs/styles/default.css',
         package: 'highlightjs',
-        cdn: '//cdnjs.cloudflare.com/ajax/libs/highlight.js/${major}.${minor}/styles/default.min.css'
+        cdn: '//cdnjs.cloudflare.com/ajax/libs/highlight.js/${version}/styles/default.min.css'
       }, {
         file: '/assets/fonts/fonts.css',
         cdn: '//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic'

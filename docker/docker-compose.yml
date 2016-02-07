@@ -3,9 +3,9 @@ nginx:
   ports:
     - "80:80"
   links:
-    - ghost
+    - brage-ghost
 
-ghost:
+brage-ghost:
   build: ghost
   ports:
     - "2368:2368"
