@@ -8,7 +8,7 @@ var config = require('../../config');
 
 var g;
 
-gulp.task('ghost:production', ['dist', 'symlink:production'], function () {
+gulp.task('ghost:production', ['dist'], function () {
   g = ghost({
     config: path.join(__dirname, config.ghost.prod.config)
   });
@@ -19,7 +19,10 @@ gulp.task('ghost:production', ['dist', 'symlink:production'], function () {
 
   g.then(function (ghostServer) {
     ghostServer.start().then(function () {
-      runSequence('browser-sync:production');
+      runSequence(
+        'symlink:production',
+        'browser-sync:production'
+      );
     });
   })
 });

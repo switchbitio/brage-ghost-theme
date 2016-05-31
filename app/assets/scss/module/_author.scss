@@ -39,6 +39,20 @@
   .share {
     background-color: lighten($secondary-colour, 22%);
     text-align: center;
-    font-size: 3em;
+    font-size: 4em;
+
+    @include media($mobile) {
+      margin-top: 4rem;
+      font-size: 3em;
+    }
+
+    a {
+      color: $primary-colour;
+      text-decoration: none;
+
+      &:hover {
+        color: $secondary-colour;
+      }
+    }
   }
 }

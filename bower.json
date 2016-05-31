@@ -4,6 +4,6 @@
   "description": "Brage Ghost theme",
   "dependencies": {
     "normalize-scss": "~3.0.3",
-    "highlightjs": "~9.1.0"
+    "highlightjs": "~9.4.0"
   }
 }

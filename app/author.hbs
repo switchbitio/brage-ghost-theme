@@ -1,25 +1,39 @@
 {{!< default}}
 
 <section class="author-section">
+  {{#author}}
   <div class="author-profile">
-    {{#author}}
-      <img src="{{image}}" alt="Donovan Muller"/>
+    {{#if image}}
+    <img src="{{image}}" alt="{{name}}"/>
+    {{else}}
+    <img src="//www.gravatar.com/avatar?d=mm&s=512" alt="{{name}}"/>
+    {{/if}}
 
-      <div class="author-details">
-        <h1>{{name}}</h1>
+    <div class="author-details">
+      <h1>{{name}}</h1>
 
-        <p>{{bio}}</p>
-      </div>
-    {{/author}}
+      <p>{{bio}}</p>
+    </div>
   </div>
 
   <section class="share">
-    <a href="https://twitter.com/intent/follow?screen_name={{author.location}}"
-       onclick="window.open(this.href, 'Twitter Follow', 'width=530,height=600');
-           return false;">
+    {{#if website}}
+    <a href="{{website}}">
+      <i class="icon-html5"></i>
+    </a>
+    {{/if}}
+    {{#if twitter}}
+    <a href="{{twitter_url}}">
       <i class="icon-twitter"></i>
     </a>
+    {{/if}}
+    {{#if facebook}}
+    <a href="{{facebook_url}}">
+      <i class="icon-facebook"></i>
+    </a>
+    {{/if}}
   </section>
+  {{/author}}
 </section>
 
 <main>
