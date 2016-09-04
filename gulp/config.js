@@ -163,7 +163,7 @@ module.exports = {
   dist: {
     docker: {
       src: 'docker',
-      command: 'docker-compose -p brage build'
+      command: 'docker-compose -f docker-compose.http.yml -p brage build'
     }
   },
   ghost: {
@@ -173,7 +173,7 @@ module.exports = {
     prod: {
       env: 'gulp/prod.env.json',
       config: '../../ghost-prod-config.js',
-      docker: 'docker-compose -p brage build && docker-compose -p brage up'
+      docker: 'docker-compose -f docker-compose.http.yml -p brage build && docker-compose -f docker-compose.http.yml -p brage up'
     }
   }
 };

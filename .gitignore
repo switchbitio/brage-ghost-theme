@@ -1,10 +1,11 @@
 node_modules
 app/bower_components
-dist*
+/dist*
 .tmp
 .sass-cache
 .idea
 *.iml
+*.map
 
 # Ghost
 *.db

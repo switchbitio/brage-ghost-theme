@@ -40,3 +40,10 @@ p, li {
   font-size: 1.2rem;
   color: $black;
 }
+
+blockquote {
+  padding: 20px 40px;
+  background-color: lighten($code-grey, 2%);
+  margin: 0;
+  border-bottom: $secondary-colour 1px solid;
+}

@@ -10,11 +10,11 @@ gulp.task('ghost:reset', function (callback) {
     'ghost:install',
     'init',
     callback
-  )
+  );
 });
 
-gulp.task('ghost:delete', function (callback) {
-  del(config.src, callback);
+gulp.task('ghost:delete', function () {
+  del.sync(config.src);
 });
 
 gulp.task('ghost:install', function () {

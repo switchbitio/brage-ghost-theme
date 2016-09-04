@@ -1,25 +1,19 @@
 var gulp = require('gulp');
-var plumber = require('gulp-plumber');
 var sass = require('gulp-sass');
-var browserSync = require('browser-sync');
+var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
-var neat = require('node-neat').includePaths;
+var neat = require("bourbon-neat").includePaths;
+var bourbon = require("bourbon").includePaths;
 var config = require('../../config').sass;
 
 gulp.task('sass', function () {
-  browserSync.notify('Compiling Sass...');
-
   return gulp
     .src(config.src)
-    .pipe(plumber({
-      errorHandler: function (err) {
-        console.log(err);
-        this.emit('end');
-      }
-    }))
+    .pipe(sourcemaps.init())
     .pipe(sass({
-      includePaths: ['sass'].concat(neat)
-    }))
+      includePaths: ['sass'].concat(neat).concat(bourbon)
+    }).on('error', sass.logError))
     .pipe(autoprefixer())
+    .pipe(sourcemaps.write('./maps'))
     .pipe(gulp.dest(config.dest));
 });

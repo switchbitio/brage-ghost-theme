@@ -5,7 +5,7 @@ var path = require('path'),
 
 config = {
   production: {
-    url: 'http://brage.switchbit.io',
+    url: process.env.BLOG_URL,
 
     database: {
       client: 'sqlite3',

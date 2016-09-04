@@ -3,15 +3,17 @@ nginx:
   ports:
     - "80:80"
   links:
-    - brage-ghost
+    - ghost
 
-brage-ghost:
+ghost:
   build: ghost
   ports:
     - "2368:2368"
   volumes_from:
     - content
+  environment:
+    - BLOG_URL=http://brage.switchbit.local.io
 
 content:
   build: content
-  command: echo "Brage ghost blog content volume"
+  command: echo "Ghost content volume"
