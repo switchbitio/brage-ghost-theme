@@ -15,7 +15,6 @@ To make developing a custom Ghost theme as seamless as possible, you would expec
 * Run a local instance of Ghost without any external dependencies
 * Reload Ghost when changes in `.hbs` templates and `.js` files are made
 * Inject changes to `.scss` files with [Browsersync](http://www.browsersync.io/)
-* Optimise all assets when building for production release (minify, uglify, revision, etc.)
 * Development dependencies through `npm` and `bower`
 
 To enable this, we use Gulp to run a local instance of Ghost with configuration to watch for changes in the above files and automatically reload when necessary.
@@ -82,7 +81,7 @@ The [Nginx Ghost Stack](https://github.com/donovanmuller/nginx-ghost-stack) prov
 platform to proxy a Ghost instance with the following features:
 
 * Optimised asset caching strategies
-* SLL/TLS encryption using [Let's Encrypt](https://letsencrypt.org/)
+* SSL/TLS encryption using [Let's Encrypt](https://letsencrypt.org/)
 * All content is served using HTTP/2 when possible
 
 Click the button below to create and deploy a Nginx Ghost Stack.
