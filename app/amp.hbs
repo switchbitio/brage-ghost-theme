@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html ⚡>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="{{meta_description}}"/>
+  <meta name="HandheldFriendly" content="True"/>
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+  <title>{{meta_title}}</title>
+
+  {{^if @blog.logo}}
+    <link rel="shortcut icon" href="{{asset "images/apple-touch-icon.png"}}"/>
+    <link rel="apple-touch-icon" href="{{asset "images/apple-touch-icon.png"}}"/>
+  {{/if}}
+
+  {{amp_ghost_head}}
+
+  <link href="assets/css/amp.css" inline amp-custom>
+  <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+  <script async src="https://cdn.ampproject.org/v0.js"></script>
+
+  {{amp_components}}
+</head>
+
+<body class="amp-template">
+  {{#post}}
+    {{^is "home"}}
+      <nav class="navigation" role="banner">
+        <div class="navigation-wrapper">
+          <a href="{{@blog.url}}" class="logo">
+            <span>{{@blog.title}}</span>
+          </a>
+        </div>
+      </nav>
+    {{/is}}
+
+    <header class="main-header">
+      <nav class="blog-title">
+        <a href="{{@blog.url}}">{{@blog.title}}</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <article class="{{post_class}}">
+
+        <header class="post-header">
+          <h1 class="post-title">{{title}}</h1>
+          <div class="post-meta">
+            <time class="post-date" datetime="{{date format='YYYY-MM-DD'}}">
+              {{date format="DD MMMM YYYY"}}
+            </time>
+            <div class="tags">
+              {{#foreach tags}}
+                <a href="{{url}}" title="{{name}}"><i class="icon-tags"></i>&nbsp;{{name}}</a>
+              {{/foreach}}
+            </div>
+          </div>
+        </header>
+
+        <section class="post-content">
+          {{amp_content}}
+        </section>
+
+        <footer class="post-meta">
+          {{#author}}
+            by <a href="{{url}}">{{name}}</a>
+            <p>{{bio}}</p>
+          {{/author}}
+        </footer>
+
+      </article>
+
+    </main>
+  {{/post}}
+  <footer class="footer" role="contentinfo">
+    <section class="legal">
+      <aside>Brage theme by <a href="http://switchbit.io">Switchbit</a></aside>
+    </section>
+  </footer>
+</body>
+</html>
+

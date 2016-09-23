@@ -7,7 +7,7 @@
     {{#if @blog.logo}}
       <img src="{{@blog.logo}}" alt="{{@blog.title}}"/>
     {{else}}
-      <img src="/assets/images/brage-logo.png" alt="Brage Theme"/>
+      <img src="{{asset "/images/brage-logo.png"}}" alt="Brage Theme"/>
     {{/if}}
     <h1>{{@blog.title}}</h1>
 

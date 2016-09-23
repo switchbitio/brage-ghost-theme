@@ -1,7 +1,7 @@
 {
   "name": "Brage",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Brage Ghost theme",
-  "repository": "switchbitio/brage-ghost-theme",
+  "repository": "https://github.com/switchbitio/brage-ghost-theme",
   "license" : "MIT"
 }

@@ -1,0 +1,11 @@
+@import "grid-settings.scss";
+@import "bourbon";
+@import "neat";
+
+// Layout based on https://smacss.com
+@import "base/colours.scss";
+@import "base/amp-typography.scss";
+
+@import "layout/amp-header.scss";
+@import "layout/amp-post.scss";
+@import "layout/amp-footer.scss";

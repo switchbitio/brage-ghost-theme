@@ -1,4 +1,4 @@
-FROM ghost:0.9
+FROM ghost:0.11
 
 WORKDIR $GHOST_SOURCE
 ADD dist/ content/themes/brage

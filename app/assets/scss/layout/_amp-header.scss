@@ -1,0 +1,21 @@
+@import "../module/amp-top-nav.scss";
+
+header {
+
+  > section {
+    @include span-columns(12);
+    @include pad();
+
+    background: $primary-colour;
+    text-align: center;
+    border-bottom: 2px solid $secondary-colour;
+
+    h1 {
+      color: $secondary-colour;
+    }
+
+    h2 {
+      color: whitesmoke;
+    }
+  }
+}

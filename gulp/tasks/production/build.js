@@ -13,6 +13,7 @@ gulp.task('dist', function (callback) {
     ],
     'sass',
     'useref',
+    'inlinecss',
     [
       'optimize:css',
       'optimize:js',

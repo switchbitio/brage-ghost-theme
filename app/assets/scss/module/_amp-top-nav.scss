@@ -11,10 +11,6 @@ nav.navigation {
   position: fixed;
   top: 0;
 
-  @include media($tablet) {
-    max-height: 30px;
-  }
-
   .navigation-wrapper {
     @include clearfix;
     @include outer-container;
@@ -33,47 +29,12 @@ nav.navigation {
       text-decoration: none;
     }
 
-    @include media($mobile) {
-      padding: 0;
-    }
-
-    img {
-      max-height: $navigation-height;
-      padding: 0.8em 0px 0.8em 0.8em;
-      float: left;
-    }
-
     span {
       color: $secondary-colour;
-      font-family: "nexa-bold", "sans-serif";
+      font-family: "sans-serif";
       font-size: 1.7em;
       line-height: 2.5em;
       margin-left: 0.5em;
-    }
-  }
-
-  // Nav menu
-
-  nav {
-    float: none;
-    min-height: $navigation-height;
-    z-index: 9999999;
-
-    .nav-link {
-      color: whitesmoke;
-      font-size: 2.1em;
-      font-family: "nexa-bold", "sans-serif";
-      float: right;
-      padding: 0.5em 0 0;
-      text-decoration: none;
-      text-transform: uppercase;
-
-      &.social {
-
-        @include media($mobile) {
-          display: none;
-        }
-      }
     }
   }
 }
