@@ -1,15 +1,1 @@
-ghost-content:
-  image: donovanmuller/ghost-content:0.11
-  command: echo "Ghost content volume"
-  autoredeploy: false
-
-ghost:
-  image: donovanmuller/ghost-with-brage-theme:0.11
-  volumes_from:
-    - ghost-content
-  environment:
-    - VIRTUAL_HOST=?
-    - LETSENCRYPT_HOST=?
-    - LETSENCRYPT_EMAIL=?
-    - BLOG_URL=?
-  restart: always
+docker-cloud.yml

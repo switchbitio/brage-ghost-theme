@@ -93,7 +93,7 @@ Click the button below to create and deploy a Nginx Ghost Stack.
 Once you have the Nginx Ghost Stack successfully running in Docker Cloud, click the button below 
 to create the Brage Ghost Stack, which will be proxied by the Nginx Ghost Stack.
 
-[![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/?repo=https://github.com/switchbitio/brage-ghost-theme/docker/cloud)
+[![Deploy to Docker Cloud](https://files.cloud.docker.com/images/deploy-to-dockercloud.svg)](https://cloud.docker.com/stack/deploy/?repo=https://github.com/switchbitio/brage-ghost-theme)
 
 **Before deploying the Stack** make sure to provide the necessary details matching your blog for the following
 environment variables in the Stack file:
