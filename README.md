@@ -102,7 +102,7 @@ environment variables in the Stack file:
 ...
 
 ghost:
-  image: donovanmuller/ghost-with-brage-theme:0.9
+  image: donovanmuller/ghost-with-brage-theme:0.11.1
   volumes_from:
     - ghost-content
   environment:
