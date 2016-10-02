@@ -35,6 +35,10 @@ blockquote {
   margin: 0;
   border-bottom: #ffe066 1px solid; }
 
+code, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
 nav.navigation {
   background-color: #f25f5c;
   min-height: 60px;
@@ -136,6 +140,26 @@ main {
     display: block;
     font-size: 1rem;
     color: #70c1b4; }
+  .post code, .post tt {
+    padding: 1px 3px;
+    font-family: monospace, sans-serif;
+    font-size: 0.85em;
+    white-space: pre-wrap;
+    background: #f0f0f0; }
+  .post pre {
+    box-sizing: border-box;
+    margin: 0 0 1.75em 0;
+    width: 100%;
+    padding: 10px;
+    font-family: monospace, sans-serif;
+    white-space: pre;
+    overflow: auto;
+    background: #f0f0f0; }
+  .post pre code, .post pre tt {
+    white-space: pre-wrap;
+    background: transparent;
+    border: none;
+    padding: 0; }
 
 .amp-template main {
   margin-top: 1rem; }
@@ -183,6 +207,7 @@ main {
   margin: 4rem 0 0;
   text-align: center; }
   .amp-template .post footer a {
+    padding: 1rem 0;
     display: block;
     font-size: 1.5em;
     font-family: "sans-serif"; }
