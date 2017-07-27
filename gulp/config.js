@@ -175,5 +175,8 @@ module.exports = {
       config: '../../ghost-prod-config.js',
       docker: 'docker-compose -f docker-compose.yml -p brage build && docker-compose -f docker-compose.yml -p brage up'
     }
+  },
+  kinex: {
+    command: 'knex-migrator init'
   }
 };

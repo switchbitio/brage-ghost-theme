@@ -30,7 +30,7 @@ a {
   text-decoration: none;
   color: $primary-colour;
 
-  &:hover {
+  &:hover, &:not(.read-next-story), &:not(.read-next-story.prev) {
     text-decoration: underline;
   }
 }

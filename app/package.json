@@ -1,7 +1,31 @@
 {
-  "name": "Brage",
-  "version": "1.4.9",
+  "name": "brage",
+  "version": "2.0.0",
   "description": "Brage Ghost theme",
   "repository": "https://github.com/switchbitio/brage-ghost-theme",
-  "license" : "MIT"
+  "license": "MIT",
+  "engines": {
+    "ghost": ">=1.0.0"
+  },
+  "config": {
+    "posts_per_page": 5
+  },
+  "author": {
+    "name": "Donovan Muller",
+    "email": "donovan.muller@gmail.com",
+    "url": "https://blog.switchbit.io"
+  },
+  "gpm": {
+    "type": "theme",
+    "categories": [
+      "Minimal",
+      "Personal Blogs"
+    ]
+  },
+  "screenshots": {
+    "desktop": "assets/images/brage-screenshot-desktop.jpg",
+    "mobile": "assets/images/brage-screenshot-mobile.jpg"
+  },
+  "demo": "https://brage.switchbit.io",
+  "homepage": "https://github.com/switchbitio/brage-ghost-theme"
 }
