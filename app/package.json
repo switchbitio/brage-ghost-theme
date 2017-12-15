@@ -1,11 +1,11 @@
 {
   "name": "brage",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Brage Ghost theme",
   "repository": "https://github.com/switchbitio/brage-ghost-theme",
   "license": "MIT",
   "engines": {
-    "ghost": ">=1.0.0"
+    "ghost": ">=1.19.0"
   },
   "config": {
     "posts_per_page": 5

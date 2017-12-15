@@ -62,7 +62,7 @@ services:
       - VIRTUAL_PORT=2368
       - LETSENCRYPT_HOST=?
       - LETSENCRYPT_EMAIL=?
-      - BLOG_URL=http://brage.switchbit.local.io
+      - url=http://brage.switchbit.local.io
     networks:
       - proxy-tier
 

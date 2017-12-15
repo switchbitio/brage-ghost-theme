@@ -12,7 +12,7 @@ ghost:
   volumes_from:
     - content
   environment:
-    - BLOG_URL=http://brage.switchbit.local.io
+    - url=http://brage.switchbit.local.io
 
 content:
   build: content

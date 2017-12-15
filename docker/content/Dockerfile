@@ -1,3 +1,3 @@
-FROM ghost:0.11.9
+FROM ghost:1.19.0-alpine
 
 VOLUME $GHOST_CONTENT

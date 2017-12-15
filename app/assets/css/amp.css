@@ -1,8 +1,10 @@
 html {
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
 
 *, *::after, *::before {
-  box-sizing: inherit; }
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit; }
 
 html {
   font-family: 'Lora', serif; }
@@ -147,7 +149,8 @@ main {
     white-space: pre-wrap;
     background: #f0f0f0; }
   .post pre {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     margin: 0 0 1.75em 0;
     width: 100%;
     padding: 10px;
