@@ -26,6 +26,8 @@ The layout of the Gulp tasks as well as some of the configurations are inspired 
  
 ## Using the Brage theme as is
 
+> Only *Node 6.x* is supported.
+
 ### By building a release
  
 If you simply want to use the Brage theme for your own Ghost blog then you can [download](https://github.com/switchbitio/brage-ghost-theme/releases) the latest release
@@ -109,7 +111,7 @@ ghost:
     - VIRTUAL_HOST=?
     - LETSENCRYPT_HOST=?
     - LETSENCRYPT_EMAIL=?
-    - BLOG_URL=?
+    - url=?
   restart: always
 ```
 
